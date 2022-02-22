@@ -19,8 +19,6 @@
 		BD97D8AA27C47A4500243B7D /* Shader.h in Sources */ = {isa = PBXBuildFile; fileRef = BD97D8A927C47A4500243B7D /* Shader.h */; };
 		BD97D90E27C4888D00243B7D /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BD97D90D27C4888D00243B7D /* Shader.cpp */; };
 		BD97D91027C48BAF00243B7D /* libfreetype.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD97D90F27C48BAF00243B7D /* libfreetype.a */; };
-		BD97D91227C4A26200243B7D /* text.vs in Sources */ = {isa = PBXBuildFile; fileRef = BD97D91127C4A26200243B7D /* text.vs */; };
-		BD97D91427C4A27F00243B7D /* text.fs in Sources */ = {isa = PBXBuildFile; fileRef = BD97D91327C4A27F00243B7D /* text.fs */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -562,11 +560,11 @@
 		BD97D90827C4864500243B7D /* ftlcdfil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ftlcdfil.h; sourceTree = "<group>"; };
 		BD97D90927C4864500243B7D /* ftbdf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ftbdf.h; sourceTree = "<group>"; };
 		BD97D90A27C4864500243B7D /* ftrender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ftrender.h; sourceTree = "<group>"; };
-		BD97D90C27C4883200243B7D /* NotoSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Bold.ttf"; sourceTree = "<group>"; };
 		BD97D90D27C4888D00243B7D /* Shader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Shader.cpp; sourceTree = "<group>"; };
 		BD97D90F27C48BAF00243B7D /* libfreetype.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libfreetype.a; sourceTree = "<group>"; };
-		BD97D91127C4A26200243B7D /* text.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = text.vs; sourceTree = "<group>"; };
-		BD97D91327C4A27F00243B7D /* text.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = text.fs; sourceTree = "<group>"; };
+		BD97D91927C4A6D200243B7D /* text.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = text.fs; sourceTree = "<group>"; };
+		BD97D91A27C4A6D200243B7D /* text.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = text.vs; sourceTree = "<group>"; };
+		BD97D91C27C4A6D200243B7D /* NotoSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Bold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1285,11 +1283,27 @@
 		BD97D90B27C4879C00243B7D /* resources */ = {
 			isa = PBXGroup;
 			children = (
-				BD97D90C27C4883200243B7D /* NotoSans-Bold.ttf */,
-				BD97D91127C4A26200243B7D /* text.vs */,
-				BD97D91327C4A27F00243B7D /* text.fs */,
+				BD97D91B27C4A6D200243B7D /* fonts */,
+				BD97D91827C4A6D200243B7D /* shaders */,
 			);
 			path = resources;
+			sourceTree = "<group>";
+		};
+		BD97D91827C4A6D200243B7D /* shaders */ = {
+			isa = PBXGroup;
+			children = (
+				BD97D91927C4A6D200243B7D /* text.fs */,
+				BD97D91A27C4A6D200243B7D /* text.vs */,
+			);
+			path = shaders;
+			sourceTree = "<group>";
+		};
+		BD97D91B27C4A6D200243B7D /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				BD97D91C27C4A6D200243B7D /* NotoSans-Bold.ttf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1351,9 +1365,7 @@
 			files = (
 				BD97D89827C3AC9500243B7D /* glm.cpp in Sources */,
 				BD97D52827C3A87100243B7D /* main.cpp in Sources */,
-				BD97D91227C4A26200243B7D /* text.vs in Sources */,
 				BD97D8AA27C47A4500243B7D /* Shader.h in Sources */,
-				BD97D91427C4A27F00243B7D /* text.fs in Sources */,
 				BD97D53327C3AC5B00243B7D /* glad.c in Sources */,
 				BD97D90E27C4888D00243B7D /* Shader.cpp in Sources */,
 			);
