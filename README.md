@@ -21,3 +21,7 @@
     * Cocoa.framework
     * OpenGL.framework
     * GLUT.framework
+
+- 使用freetype库的注意事项
+    * 编译freetype库时，使用configure --without-harfbuzz --without-png
+    * 在Xcode project中-> linker flags 设置：-lz -lbz2
